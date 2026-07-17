@@ -5,11 +5,50 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        TextButton(
+          style: TextButton.styleFrom(foregroundColor: Colors.red),
+          onPressed: () {
+            print("Button Click");
+          },
+          child: const Text("Click", style: TextStyle(fontSize: 30)),
+        ),
 
-        
+        const SizedBox(height: 10),
+
+        FilledButton(
+          style: FilledButton.styleFrom(backgroundColor: Colors.green),
+          onPressed: () {},
+          child: const Text(
+            "Click",
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+        ),
+
+        const SizedBox(height: 10),
+        OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            side: const BorderSide(color: Colors.blueGrey, width: 3),
+            backgroundColor: Colors.yellow,
+          ),
+          onPressed: () {},
+          child: const Text(
+            "Click",
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+        ),
+
+        const SizedBox(height: 10),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+          onPressed: () {},
+          child: const Text(
+            "Click",
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+        ),
       ],
     );
   }
